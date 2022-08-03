@@ -6,8 +6,7 @@ router.get("/", function (req, res) {
 });
 
 router.get("/get_amt", function (req, res) {
-
-    
+  console.log("Request ", req);
 
   res.render("product");
 });
