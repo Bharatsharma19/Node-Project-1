@@ -4,10 +4,7 @@ var router = express.Router();
 router.get("/", function (req, res) {
   res.render("product", {
     title: "Products",
-    productName: "",
-    qty: "",
-    rate: "",
-    amount: "",
+    status: false,
   });
 });
 
@@ -31,6 +28,7 @@ router.get("/checkout", function (req, res) {
   var amt = rate * qty;
 
   res.render("product", {
+    status: true,
     title: "Products",
     productName: pn,
     qty: qty,

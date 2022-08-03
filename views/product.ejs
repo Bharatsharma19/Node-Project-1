@@ -32,11 +32,16 @@
         <input type="submit" value="Submit" style="cursor: pointer" />
       </form>
       <br /><br />
+
+      <% if(status) { %>
+
       <h1 style="color: rgb(139, 60, 0)"><%= productName %></h1>
       <h2 style="color: darkmagenta">
         Rate : <%= rate %> || Quantity : <%= qty %>
       </h2>
       <h1 style="color: green">Total Amount : <%= amount %></h1>
+      <% } %>
+      
     </center>
   </body>
 </html>
