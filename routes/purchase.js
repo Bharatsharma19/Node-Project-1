@@ -5,7 +5,7 @@ router.get("/", function (req, res) {
   res.render("product", { title: "Products" });
 });
 
-router.get("/get_amt", function (req, res) {
+router.get("/checkout/get_amt", function (req, res) {
   console.log("Request ", req);
 
   res.render("product");
