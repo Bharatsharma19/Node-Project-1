@@ -18,10 +18,7 @@ router.get("/checkout", function (req, res) {
   var qty = req.query.qty;
   var rate = 0;
 
-  console.log(qty);
-  console.log(pn);
-
-  if (pn == "Suit") {
+  if (pn == "Shirt") {
     rate = 999;
   } else if (pn == "T-Shirt") {
     rate = 699;
