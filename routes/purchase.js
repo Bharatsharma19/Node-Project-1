@@ -2,7 +2,13 @@ var express = require("express");
 var router = express.Router();
 
 router.get("/", function (req, res) {
-  res.render("product", { title: "Products" });
+  res.render("product", {
+    title: "Products",
+    productName: "",
+    qty: "",
+    rate: "",
+    amount: "",
+  });
 });
 
 router.get("/checkout", function (req, res) {
@@ -12,6 +18,9 @@ router.get("/checkout", function (req, res) {
   var qty = req.query.qty;
   var rate = 0;
 
+  console.log(qty);
+  console.log(pn);
+
   if (pn == "Suit") {
     rate = 999;
   } else if (pn == "T-Shirt") {
@@ -20,15 +29,13 @@ router.get("/checkout", function (req, res) {
     rate = 1599;
   } else if (pn == "Suit") {
     rate = 3999;
-  } else if (pn == " ") {
-    var error = "Please select a product";
   }
 
   var amt = rate * qty;
 
   res.render("product", {
+    title: "Products",
     productName: pn,
-    error: error,
     qty: qty,
     rate: rate,
     amount: amt,

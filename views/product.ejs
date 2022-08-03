@@ -9,37 +9,32 @@
   <body>
     <center>
       <h1><%= title %></h1>
-      <form action="/purchase">
+      <form action="/purchase/checkout">
         <table>
           <tr>
             <td>
-              <select name="productName">
-                <option name="" id="">--Select Product--</option>
-                <option name="Suit" id="">Suit</option>
-                <option name="Jeans" id="">Jeans</option>
-                <option name="Shirt" id="">Shirt</option>
-                <option name="T-Shirt" id="">T-Shirt</option>
-              </select>
+              <b>Select Product : </b>
             </td>
             <td>
-              <input
-                type="number"
-                name="Enter Quantity"
-                value="qty"
-                placeholder="Enter Quantity"
-              />
+              <select name="productName">
+                <option>--Select--</option>
+                <option>Suit</option>
+                <option>Jeans</option>
+                <option>Shirt</option>
+                <option>T-Shirt</option>
+              </select>
             </td>
           </tr>
+          <td><b>Enter Quantity : </b></td>
+          <td><input type="number" name="qty" id="qty" /></td>
         </table>
         <br />
         <input type="submit" value="Submit" style="cursor: pointer" />
       </form>
       <br /><br />
-      <h1>Product Name : <%= pn %></h1>
-      <h2>Error : <%= error %></h2>
-      <h1>Rate : <%= rate %></h1>
-      <h1>Quantity : <%= qty %></h1>
-      <h1>Total Amount : <%= amt %></h1>
+      <h1 style="color: rgb(139, 60, 0)"><%= productName %></h1>
+      <h2 style="color: darkmagenta;">Rate : <%= rate %> || Quantity : <%= qty %></h2>
+      <h1 style="color: green">Total Amount : <%= amount %></h1>
     </center>
   </body>
 </html>
