@@ -9,23 +9,23 @@
   <body>
     <center>
       <h1><%= title %></h1>
-      <form action="/checkout/get_amt">
+      <form action="/purchase">
         <table>
           <tr>
             <td>
               <select name="productName">
                 <option name="" id="">--Select Product--</option>
-                <option name="" id="">Suit</option>
-                <option name="" id="">Jeans</option>
-                <option name="" id="">Shirt</option>
-                <option name="" id="">T-Shirt</option>
+                <option name="Suit" id="">Suit</option>
+                <option name="Jeans" id="">Jeans</option>
+                <option name="Shirt" id="">Shirt</option>
+                <option name="T-Shirt" id="">T-Shirt</option>
               </select>
             </td>
             <td>
               <input
                 type="number"
                 name="Enter Quantity"
-                id=""
+                value="qty"
                 placeholder="Enter Quantity"
               />
             </td>
@@ -34,6 +34,12 @@
         <br />
         <input type="submit" value="Submit" style="cursor: pointer" />
       </form>
+      <br /><br />
+      <h1>Product Name : <%= pn %></h1>
+      <h2>Error : <%= error %></h2>
+      <h1>Rate : <%= rate %></h1>
+      <h1>Quantity : <%= qty %></h1>
+      <h1>Total Amount : <%= amt %></h1>
     </center>
   </body>
 </html>
